@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <Import Sdk="Microsoft.NET.Sdk" Project="Sdk.props" />
+	
+  <PropertyGroup>
+    <RootNamespace>AutoMapper.Analyzers.Vsix</RootNamespace>
+    <AssemblyName>AutoMapper.Analyzers.Vsix</AssemblyName>
+    <TargetFramework>net472</TargetFramework>
+    <GeneratePkgDefFile>false</GeneratePkgDefFile>
+    <IncludeAssemblyInVSIXContainer>false</IncludeAssemblyInVSIXContainer>
+    <IncludeDebugSymbolsInVSIXContainer>false</IncludeDebugSymbolsInVSIXContainer>
+    <IncludeDebugSymbolsInLocalVSIXDeployment>false</IncludeDebugSymbolsInLocalVSIXDeployment>
+    <CopyBuildOutputToOutputDirectory>false</CopyBuildOutputToOutputDirectory>
+    <CopyOutputSymbolsToOutputDirectory>false</CopyOutputSymbolsToOutputDirectory>
+	<VSSDKTargetPlatformRegRootSuffix>Roslyn</VSSDKTargetPlatformRegRootSuffix>
+    <StartAction>Program</StartAction>
+    <StartProgram Condition="'$(DevEnvDir)' != ''">$(DevEnvDir)devenv.exe</StartProgram>
+    <StartArguments>/rootsuffix $(VSSDKTargetPlatformRegRootSuffix)</StartArguments>
+	<LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+    <ItemGroup>
+	    <PackageReference Include="Microsoft.VSSDK.BuildTools" Version="17.2.2186" PrivateAssets="all" />
+    </ItemGroup>
+
+	<Import Sdk="Microsoft.NET.Sdk" Project="Sdk.targets" />
+
+	<Import Project="$(VSToolsPath)\VSSDK\Microsoft.VsSDK.targets" Condition="Exists('$(VSToolsPath)\VSSDK\Microsoft.VsSDK.targets')" />
+
+	<ItemGroup>
+		<ProjectReference Include="..\..\src\AutoMapper.Analyzers.Common\AutoMapper.Analyzers.Common.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Include="source.extension.vsixmanifest">
+			<SubType>Designer</SubType>
+		</None>
+	</ItemGroup>
+	
+	<ItemGroup>
+		<!-- https://github.com/dotnet/sdk/issues/433 -->
+		<ProjectReference Update="@(ProjectReference)" AdditionalProperties="TargetFramework=netstandard2.1" />
+
+		<!-- https://github.com/Microsoft/extendvs/issues/57 -->
+		<ProjectReference Update="@(ProjectReference)" Name="%(Filename)" />
+	</ItemGroup>
+	
+</Project>
