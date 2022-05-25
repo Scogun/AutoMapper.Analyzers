@@ -23,5 +23,7 @@
     <Assets>
         <Asset Type="Microsoft.VisualStudio.MefComponent" d:Source="Project" d:ProjectName="AutoMapper.Analyzers.Common" Path="|AutoMapper.Analyzers.Common|" />
         <Asset Type="Microsoft.VisualStudio.Analyzer" d:Source="Project" d:ProjectName="AutoMapper.Analyzers.Common" Path="|AutoMapper.Analyzers.Common|" />
+        <Asset Type="Microsoft.VisualStudio.MefComponent" d:Source="Project" d:ProjectName="AutoMapper.Analyzers.Common.CodeFixes" Path="|AutoMapper.Analyzers.Common.CodeFixes|" />
+        <Asset Type="Microsoft.VisualStudio.Analyzer" d:Source="Project" d:ProjectName="AutoMapper.Analyzers.Common.CodeFixes" Path="|AutoMapper.Analyzers.Common.CodeFixes|" />
     </Assets>
 </PackageManifest>

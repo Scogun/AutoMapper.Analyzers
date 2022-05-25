@@ -86,5 +86,32 @@ namespace AutoMapper.Analyzers.Common {
                 return ResourceManager.GetString("AMA0001Title", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Properties with identical names should not be mapped manually..
+        /// </summary>
+        internal static string AMA0002Description {
+            get {
+                return ResourceManager.GetString("AMA0002Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Profile &apos;{0}&apos; contain map &apos;{1}&apos; with identical properties mapping..
+        /// </summary>
+        internal static string AMA0002Message {
+            get {
+                return ResourceManager.GetString("AMA0002Message", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Identical names properties manual mapped..
+        /// </summary>
+        internal static string AMA0002Title {
+            get {
+                return ResourceManager.GetString("AMA0002Title", resourceCulture);
+            }
+        }
     }
 }

@@ -1,4 +1,5 @@
-﻿using Microsoft.CodeAnalysis.Testing;
+﻿using Microsoft.CodeAnalysis.CodeFixes;
+using Microsoft.CodeAnalysis.Testing;
 
 namespace AutoMapper.Analyzers.Common.Tests;
 
@@ -19,5 +20,14 @@ public class MapBaseAnalyzerTests<TAnalyzer> : BaseAnalyzerTests
     protected async Task VerifyAnalyzerAsync(string mapFrom, params DiagnosticResult[] expected)
     {
         await AnalyzerVerifier<TAnalyzer>.VerifyAnalyzerAsync(ClassSourceCode(mapFrom), expected);
+    }
+    
+    protected async Task VerifyCodeFixAsync<TCodeFix>(string diagnosticId, string forMember, string forMemberFix)
+        where TCodeFix : CodeFixProvider, new()
+    {
+        var mapFrom = string.Format(CreateMapCode, forMember);
+        var fixMapFrom = string.Format(CreateMapCode, forMemberFix);
+        var expected = AnalyzerVerifier<TAnalyzer>.Diagnostic(diagnosticId).WithArguments("TestProfile", MapName).WithLocation(0);
+        await AnalyzerVerifier<TAnalyzer>.VerifyCodeFixAsync<TCodeFix>(ClassSourceCode(mapFrom), expected, ClassSourceCode(fixMapFrom));
     }
 }

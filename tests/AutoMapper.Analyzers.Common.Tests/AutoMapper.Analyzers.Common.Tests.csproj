@@ -26,12 +26,14 @@
         <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       </PackageReference>
       <PackageReference Include="Microsoft.CodeAnalysis.CSharp.Analyzer.Testing.NUnit" Version="1.1.1" />
+      <PackageReference Include="Microsoft.CodeAnalysis.CSharp.CodeFix.Testing.NUnit" Version="1.1.1" />
       <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.2.0" />
       <PackageReference Include="NUnit" Version="3.13.3" />
       <PackageReference Include="NUnit3TestAdapter" Version="4.2.1" />
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\..\src\AutoMapper.Analyzers.Common.CodeFixes\AutoMapper.Analyzers.Common.CodeFixes.csproj" />
       <ProjectReference Include="..\..\src\AutoMapper.Analyzers.Common\AutoMapper.Analyzers.Common.csproj" />
     </ItemGroup>
 

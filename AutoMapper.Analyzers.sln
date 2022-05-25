@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutoMapper.Analyzers.Vsix",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutoMapper.Analyzers.Common.Tests", "tests\AutoMapper.Analyzers.Common.Tests\AutoMapper.Analyzers.Common.Tests.csproj", "{C8DC7E99-D7C6-4D24-AEA4-CEBC92207534}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoMapper.Analyzers.Common.CodeFixes", "src\AutoMapper.Analyzers.Common.CodeFixes\AutoMapper.Analyzers.Common.CodeFixes.csproj", "{4FC11BE6-9A0D-4147-A968-9D2B508D25D5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +43,14 @@ Global
 		{C8DC7E99-D7C6-4D24-AEA4-CEBC92207534}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C8DC7E99-D7C6-4D24-AEA4-CEBC92207534}.Release|x86.ActiveCfg = Release|Any CPU
 		{C8DC7E99-D7C6-4D24-AEA4-CEBC92207534}.Release|x86.Build.0 = Release|Any CPU
+		{4FC11BE6-9A0D-4147-A968-9D2B508D25D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FC11BE6-9A0D-4147-A968-9D2B508D25D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FC11BE6-9A0D-4147-A968-9D2B508D25D5}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{4FC11BE6-9A0D-4147-A968-9D2B508D25D5}.Debug|x86.Build.0 = Debug|Any CPU
+		{4FC11BE6-9A0D-4147-A968-9D2B508D25D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FC11BE6-9A0D-4147-A968-9D2B508D25D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FC11BE6-9A0D-4147-A968-9D2B508D25D5}.Release|x86.ActiveCfg = Release|Any CPU
+		{4FC11BE6-9A0D-4147-A968-9D2B508D25D5}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

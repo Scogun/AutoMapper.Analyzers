@@ -82,16 +82,4 @@ public abstract class ForMemberAnalyzer : BaseAnalyzer
 
         return false;
     }
-    
-    /*protected static bool TryGetExpressionMemberName(ExpressionSyntax syntax, out string name)
-    {
-        name = null;
-        if (TryGetExpressionMemberName(syntax, out IdentifierNameSyntax memberName))
-        {
-            name = memberName.ToString();
-            return true;
-        }
-
-        return false;
-    }*/
 }
