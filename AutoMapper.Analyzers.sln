@@ -9,7 +9,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutoMapper.Analyzers.Vsix",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutoMapper.Analyzers.Common.Tests", "tests\AutoMapper.Analyzers.Common.Tests\AutoMapper.Analyzers.Common.Tests.csproj", "{C8DC7E99-D7C6-4D24-AEA4-CEBC92207534}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoMapper.Analyzers.Common.CodeFixes", "src\AutoMapper.Analyzers.Common.CodeFixes\AutoMapper.Analyzers.Common.CodeFixes.csproj", "{4FC11BE6-9A0D-4147-A968-9D2B508D25D5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutoMapper.Analyzers.Common.CodeFixes", "src\AutoMapper.Analyzers.Common.CodeFixes\AutoMapper.Analyzers.Common.CodeFixes.csproj", "{4FC11BE6-9A0D-4147-A968-9D2B508D25D5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4B1787FF-1794-4F46-A077-A029835B3B4F}"
+	ProjectSection(SolutionItems) = preProject
+		LICENSE = LICENSE
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
