@@ -1,0 +1,31 @@
+name: Build and Test
+
+on:
+  pull_request:
+    branches: main
+
+jobs:
+  build-and-test:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-dotnet@v2
+        name: Setup .Net
+        with:
+          dotnet-version: 6.x.x
+      - name: Restore dependencies
+        run: dotnet restore
+      - name: Build
+        run: dotnet build --no-restore
+      - name: Test
+        run: dotnet test --no-build --verbosity normal --logger "trx;LogFileName=test-results.trx"
+      - uses: phoenix-actions/test-reporting@v3
+        name: Test Report
+        if: always()
+        with:
+          name: Analyzers and Fixes Tests
+          path: '**/test-results.trx'
+          reporter: dotnet-trx
+          fail-on-error: true
