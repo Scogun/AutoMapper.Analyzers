@@ -5,6 +5,8 @@ VisualStudioVersion = 17.2.32519.379
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutoMapper.Analyzers.Common", "src\AutoMapper.Analyzers.Common\AutoMapper.Analyzers.Common.csproj", "{C047F9A8-97E9-4988-B3C5-4D3EB646692E}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutoMapper.Analyzers.Common.Tests", "tests\AutoMapper.Analyzers.Common.Tests\AutoMapper.Analyzers.Common.Tests.csproj", "{C8DC7E99-D7C6-4D24-AEA4-CEBC92207534}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,14 @@ Global
 		{C047F9A8-97E9-4988-B3C5-4D3EB646692E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C047F9A8-97E9-4988-B3C5-4D3EB646692E}.Release|x86.ActiveCfg = Release|Any CPU
 		{C047F9A8-97E9-4988-B3C5-4D3EB646692E}.Release|x86.Build.0 = Release|Any CPU
+		{C8DC7E99-D7C6-4D24-AEA4-CEBC92207534}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8DC7E99-D7C6-4D24-AEA4-CEBC92207534}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8DC7E99-D7C6-4D24-AEA4-CEBC92207534}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C8DC7E99-D7C6-4D24-AEA4-CEBC92207534}.Debug|x86.Build.0 = Debug|Any CPU
+		{C8DC7E99-D7C6-4D24-AEA4-CEBC92207534}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8DC7E99-D7C6-4D24-AEA4-CEBC92207534}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8DC7E99-D7C6-4D24-AEA4-CEBC92207534}.Release|x86.ActiveCfg = Release|Any CPU
+		{C8DC7E99-D7C6-4D24-AEA4-CEBC92207534}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
