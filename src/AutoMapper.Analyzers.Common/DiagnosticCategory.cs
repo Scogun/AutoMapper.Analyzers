@@ -2,5 +2,7 @@
 
 public enum DiagnosticCategory
 {
-    ProfileCategory
+    ProfileCategory,
+    
+    ForMemberCategory
 }

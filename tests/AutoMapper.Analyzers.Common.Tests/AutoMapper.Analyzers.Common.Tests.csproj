@@ -14,6 +14,10 @@
       <EmbeddedResource Include="EmptyProfileSourceCode.cs">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </EmbeddedResource>
+      <Compile Remove="ClassSourceCode.cs" />
+      <EmbeddedResource Include="ClassSourceCode.cs">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </EmbeddedResource>
     </ItemGroup>
 
     <ItemGroup>
