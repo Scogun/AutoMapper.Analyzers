@@ -3,6 +3,7 @@ using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
+using Microsoft.CodeAnalysis.Operations;
 
 namespace AutoMapper.Analyzers.Common;
 
@@ -32,15 +33,36 @@ public abstract class BaseAnalyzer : DiagnosticAnalyzer
     
     public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics => ImmutableArray.Create(Rule);
     
+    protected string ProfileName { get; private set; }
+    
     public override void Initialize(AnalysisContext context)
     {
         context.ConfigureGeneratedCodeAnalysis(GeneratedCodeAnalysisFlags.None);
         context.EnableConcurrentExecution();
 
+        context.RegisterOperationAction(AnalyzeOperation, OperationKind.Invocation);
         context.RegisterCodeBlockAction(AnalyzeCodeBlock);
         context.RegisterSyntaxNodeAction(AnalyzeSyntaxNode, SyntaxKind.ClassDeclaration);
     }
+
+    private void AnalyzeOperation(OperationAnalysisContext context)
+    {
+        if (context.Operation is IInvocationOperation invocationOperation)
+        {
+            ProfileName = context.ContainingSymbol.ContainingType.Name;
+            var diagnostic = AnalyzeInvocationOperation(invocationOperation);
+            if (diagnostic != default)
+            {
+                context.ReportDiagnostic(diagnostic);
+            }
+        }
+    }
     
+    protected virtual Diagnostic AnalyzeInvocationOperation(IInvocationOperation invocationOperation)
+    {
+        return default;
+    }
+
     protected virtual void AnalyzeCodeBlock(CodeBlockAnalysisContext context)
     {
         if (context.CodeBlock is ConstructorDeclarationSyntax constructorDeclarationSyntax)
@@ -70,5 +92,8 @@ public abstract class BaseAnalyzer : DiagnosticAnalyzer
         }
     }
 
-    protected abstract Diagnostic AnalyzeClassDeclaration(ClassDeclarationSyntax classDeclaration);
+    protected virtual Diagnostic AnalyzeClassDeclaration(ClassDeclarationSyntax classDeclaration)
+    {
+        return default;
+    }
 }
