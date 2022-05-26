@@ -1,5 +1,5 @@
 <div style="text-align: center;">
-	<img src="package/Logo.ico" />
+	<img src="package/Logo.ico" alt="Analyzers logo"/>
 </div>
 
 # Table of Contents
@@ -8,7 +8,6 @@
 2. [Structure](#structure)
    1. [Currently Available](#currently-available)
    2. [In Progress](#in-progress)
-   3. [In Plans](#in-plans)
 3. [Code Smells](#code-smells)
 4. [Installation](#installation)
    1. [NuGet package](#nuget-package)
@@ -55,7 +54,7 @@ The project already contains:
 	<tr>
 		<td><b>AMA0003</b></td>
 		<td>Manual checkind thar src is not null</td>
-		<td>In Progress...</td>
+		<td>Available for next checking: "??", "== null", "!= null"</td>
 	</tr>
 	<tr>
         <td rowspan="4">In Plans</td>
