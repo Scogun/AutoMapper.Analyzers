@@ -113,5 +113,32 @@ namespace AutoMapper.Analyzers.Common {
                 return ResourceManager.GetString("AMA0002Title", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Null checking for properties with identical names should be done by NullSubstitute call..
+        /// </summary>
+        internal static string AMA0003Description {
+            get {
+                return ResourceManager.GetString("AMA0003Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Profile &apos;{0}&apos; contain map &apos;{1}&apos; with manual null checking identical source property..
+        /// </summary>
+        internal static string AMA0003Message {
+            get {
+                return ResourceManager.GetString("AMA0003Message", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Manual checking that source property is null..
+        /// </summary>
+        internal static string AMA0003Title {
+            get {
+                return ResourceManager.GetString("AMA0003Title", resourceCulture);
+            }
+        }
     }
 }
