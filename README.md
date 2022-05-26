@@ -1,4 +1,4 @@
-<div style="text-align: center">
+<div style="text-align: center;">
 	<img src="package/Logo.ico" />
 </div>
 
@@ -41,7 +41,7 @@ The project already contains:
 	</tr>
 	<tr>
 		<td rowspan="7">Common smells</td>
-		<td rowspan="2">Available</td>
+		<td rowspan="3">Available</td>
 		<td><b>AMA0001</b></td>
 		<td rowspan="7">Warrning</td>
 		<td>Profile doesn't contain maps</td>
@@ -52,13 +52,13 @@ The project already contains:
 		<td>Identical names properties are manual mapped</td>
 		<td>Available</td>
 	</tr>
-	<tr>		
-        <td rowspan="5">In Plans</td>
+	<tr>
 		<td><b>AMA0003</b></td>
 		<td>Manual checkind thar src is not null</td>
-		<td>...</td>
+		<td>In Progress...</td>
 	</tr>
 	<tr>
+        <td rowspan="4">In Plans</td>
 		<td><b>AMA0004</b></td>
 		<td>ForMember ignore for all left properties</td>
 		<td>...</td>
