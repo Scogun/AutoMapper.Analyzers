@@ -1,4 +1,4 @@
-<div style="text-align: center;">
+<div align="center">
 	<img src="package/Logo.ico" alt="Analyzers logo"/>
 </div>
 
@@ -53,7 +53,7 @@ The project already contains:
 	</tr>
 	<tr>
 		<td><b>AMA0003</b></td>
-		<td>Manual checkind thar src is not null</td>
+		<td>Manual checking that src is not null</td>
 		<td>Available for next checking: "??", "== null", "!= null"</td>
 	</tr>
 	<tr>
