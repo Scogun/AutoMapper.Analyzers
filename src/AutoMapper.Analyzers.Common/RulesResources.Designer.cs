@@ -140,5 +140,32 @@ namespace AutoMapper.Analyzers.Common {
                 return ResourceManager.GetString("AMA0003Title", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Flattening of naming similar complex model will be done automatically..
+        /// </summary>
+        internal static string AMA0006Description {
+            get {
+                return ResourceManager.GetString("AMA0006Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Profile &apos;{0}&apos; contain map &apos;{1}&apos; with manual flattening of naming similar complex model..
+        /// </summary>
+        internal static string AMA0006Message {
+            get {
+                return ResourceManager.GetString("AMA0006Message", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Manual flattening of naming similar complex model..
+        /// </summary>
+        internal static string AMA0006Title {
+            get {
+                return ResourceManager.GetString("AMA0006Title", resourceCulture);
+            }
+        }
     }
 }
