@@ -1,0 +1,44 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <IncludeBuildOutput>false</IncludeBuildOutput>
+        <SuppressDependenciesWhenPacking>true</SuppressDependenciesWhenPacking>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <PropertyGroup>
+        <PackageId>AutoMapper.Analyzers</PackageId>
+        <PackageVersion>0.5.0.0</PackageVersion>
+        <Authors>Sergey Antonov</Authors>
+        <PackageProjectUrl>https://github.com/Scogun/AutoMapper.Analyzers</PackageProjectUrl>
+        <PackageLicenseUrl>https://github.com/Scogun/AutoMapper.Analyzers/blob/main/LICENSE</PackageLicenseUrl>
+        <PackageIcon>Logo.png</PackageIcon>
+        <PackageIconUrl />
+        <RepositoryUrl>https://github.com/Scogun/AutoMapper.Analyzers</RepositoryUrl>
+        <PackageTags>AutoMapper, analyzers</PackageTags>
+        <NoPackageAnalysis>true</NoPackageAnalysis>
+        <TargetsForTfmSpecificContentInPackage>$(TargetsForTfmSpecificContentInPackage);_OutputAnalyzers</TargetsForTfmSpecificContentInPackage>
+        <Company>UCASoft</Company>
+        <Product>AutoMapper Analyzers</Product>
+    </PropertyGroup>
+    
+    <ItemGroup>
+      <ProjectReference Include="..\..\src\AutoMapper.Analyzers.Common.CodeFixes\AutoMapper.Analyzers.Common.CodeFixes.csproj" />
+      <ProjectReference Include="..\..\src\AutoMapper.Analyzers.Common\AutoMapper.Analyzers.Common.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Include="..\Logo.png" Pack="true" PackagePath="" />
+        <None Update="tools\*.ps1" CopyToOutputDirectory="Always" Pack="true" PackagePath="" />
+    </ItemGroup>
+
+
+    <Target Name="_OutputAnalyzers">
+        <ItemGroup>
+            <TfmSpecificPackageFile Include="$(OutputPath)\AutoMapper.Analyzers.Common.dll" PackagePath="analyzers/dotnet/cs" />
+            <TfmSpecificPackageFile Include="$(OutputPath)\AutoMapper.Analyzers.Common.CodeFixes.dll" PackagePath="analyzers/dotnet/cs" />
+        </ItemGroup>
+    </Target>
+
+</Project>
