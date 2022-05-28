@@ -167,5 +167,32 @@ namespace AutoMapper.Analyzers.Common {
                 return ResourceManager.GetString("AMA0006Title", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to CreateMap into Profile should not be covered by try-catch/finally..
+        /// </summary>
+        internal static string AMA0007Description {
+            get {
+                return ResourceManager.GetString("AMA0007Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Profile &apos;{0}&apos; contain map &apos;{1}&apos; covered by {2}..
+        /// </summary>
+        internal static string AMA0007Message {
+            get {
+                return ResourceManager.GetString("AMA0007Message", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cover CreateMap by try-catch/finally..
+        /// </summary>
+        internal static string AMA0007Title {
+            get {
+                return ResourceManager.GetString("AMA0007Title", resourceCulture);
+            }
+        }
     }
 }

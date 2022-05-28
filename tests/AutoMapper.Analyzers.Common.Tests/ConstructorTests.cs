@@ -19,4 +19,11 @@ public class ConstructorTests : BaseAnalyzerTests
         var expected = AnalyzerVerifier<ConstructorAnalyzer>.Diagnostic(ConstructorAnalyzer.DiagnosticId).WithArguments("TestProfile").WithLocation(6, 5);
         await AnalyzerVerifier<ConstructorAnalyzer>.VerifyAnalyzerAsync(EmptyProfileSourceCode(string.Empty), expected);
     }
+
+    [TestCase("CreateMap<InputObject, OutputObject>();", TestName = "CreateMap into constructor")]
+    [TestCase("try { CreateMap<InputObject, OutputObject>(); } catch (Exception e) { Console.WriteLine(e.Message); }", TestName = "CreateMap into constructor into try-catch/finally should not raise AMA0001 diagnostic")]
+    public async Task ConstructorAnalyzerSuccess(string constructorBody)
+    {
+        await AnalyzerVerifier<ConstructorAnalyzer>.VerifyAnalyzerAsync(ClassSourceCode(constructorBody));
+    }
 }
