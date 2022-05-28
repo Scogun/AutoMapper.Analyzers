@@ -64,7 +64,7 @@ The project already contains:
 	<tr>		
 		<td><b>AMA0007</b></td>
 		<td>Useless try-catch/finally covering of CreateMap calls.</td>
-		<td>In Progress...</td>
+		<td>Available</td>
 	</tr>
 	<tr>
         <td rowspan="2">In Plans</td>

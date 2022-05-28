@@ -28,6 +28,6 @@ public class MapBaseAnalyzerTests<TAnalyzer> : BaseAnalyzerTests
         var mapFrom = string.Format(CreateMapCode, forMember);
         var fixMapFrom = string.Format(CreateMapCode, forMemberFix);
         var expected = AnalyzerVerifier<TAnalyzer>.Diagnostic(diagnosticId).WithArguments("TestProfile", MapName).WithLocation(0);
-        await AnalyzerVerifier<TAnalyzer>.VerifyCodeFixAsync<TCodeFix>(ClassSourceCode(mapFrom), expected, ClassSourceCode(fixMapFrom));
+        await AnalyzerVerifier<TAnalyzer>.VerifyCodeFixAsync<TCodeFix>(ClassSourceCode(mapFrom), expected, ClassSourceCode(fixMapFrom, true));
     }
 }
