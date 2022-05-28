@@ -53,4 +53,13 @@
     <data name="AMA0006Title" xml:space="preserve">
         <value>Manual flattening of naming similar complex model.</value>
     </data>
+    <data name="AMA0007Description" xml:space="preserve">
+        <value>CreateMap into Profile should not be covered by try-catch/finally.</value>
+    </data>
+    <data name="AMA0007Message" xml:space="preserve">
+        <value>Profile '{0}' contain map '{1}' covered by {2}.</value>
+    </data>
+    <data name="AMA0007Title" xml:space="preserve">
+        <value>Cover CreateMap by try-catch/finally.</value>
+    </data>
 </root>

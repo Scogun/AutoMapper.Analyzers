@@ -4,5 +4,7 @@ public enum DiagnosticCategory
 {
     ProfileCategory,
     
-    ForMemberCategory
+    ForMemberCategory,
+    
+    CreateMapCategory
 }

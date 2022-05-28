@@ -18,11 +18,8 @@ public class ForMemberCodeFixProvider : CodeFixProvider
     
     public override ImmutableArray<string> FixableDiagnosticIds => ImmutableArray.Create(MapFromAnalyzer.DiagnosticId, FlatteningAnalyzer.DiagnosticId);
     
-    public sealed override FixAllProvider GetFixAllProvider()
-    {
-        return WellKnownFixAllProviders.BatchFixer;
-    }
-    
+    public sealed override FixAllProvider GetFixAllProvider() => WellKnownFixAllProviders.BatchFixer;
+
     public sealed override async Task RegisterCodeFixesAsync(CodeFixContext context)
     {
         var root = await context.Document.GetSyntaxRootAsync(context.CancellationToken).ConfigureAwait(false);
@@ -44,6 +41,6 @@ public class ForMemberCodeFixProvider : CodeFixProvider
         var replacer = invocationNode.DescendantNodes().OfType<InvocationExpressionSyntax>().FirstOrDefault();
 
 
-        return document.WithSyntaxRoot(syntaxRoot.ReplaceNode(declaration, replacer));
+        return document.WithSyntaxRoot(syntaxRoot.ReplaceNode(declaration, replacer).NormalizeWhitespace());
     }
 }

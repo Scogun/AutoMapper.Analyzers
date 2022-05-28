@@ -14,10 +14,7 @@ public class NullSubstituteCodeFixProvider : CodeFixProvider
     public override ImmutableArray<string> FixableDiagnosticIds =>
         ImmutableArray.Create(NullSubstituteAnalyzer.DiagnosticId);
 
-    public override FixAllProvider GetFixAllProvider()
-    {
-        return WellKnownFixAllProviders.BatchFixer;
-    }
+    public override FixAllProvider GetFixAllProvider() => WellKnownFixAllProviders.BatchFixer;
 
     public override async Task RegisterCodeFixesAsync(CodeFixContext context)
     {
@@ -66,10 +63,10 @@ public class NullSubstituteCodeFixProvider : CodeFixProvider
                 SyntaxFactory.ExpressionStatement(newMapFromExpression));
             lambdaExpression =
                 SyntaxFactory.SimpleLambdaExpression(SyntaxFactory.Parameter(optIdentifier), newBlock, null);
-            return document.WithSyntaxRoot(syntaxRoot.ReplaceNode(invocationNode.Parent, lambdaExpression));
+            return document.WithSyntaxRoot(syntaxRoot.ReplaceNode(invocationNode.Parent, lambdaExpression).NormalizeWhitespace());
         }
 
-        return document.WithSyntaxRoot(syntaxRoot.ReplaceNode(invocationNode, newNullSubstituteExpression));
+        return document.WithSyntaxRoot(syntaxRoot.ReplaceNode(invocationNode, newNullSubstituteExpression).NormalizeWhitespace());
     }
 
     private bool IsComplexMapping(InvocationExpressionSyntax invocation, out string value, out string srcProperty)
