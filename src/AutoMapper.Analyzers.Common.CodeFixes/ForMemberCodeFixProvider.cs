@@ -12,10 +12,11 @@ public class ForMemberCodeFixProvider : CodeFixProvider
 {
     private readonly Dictionary<string, string> _fixTitles = new Dictionary<string, string>
     {
-        {MapFromAnalyzer.DiagnosticId, "Fix manual mapping for similar name properties"}
+        {MapFromAnalyzer.DiagnosticId, "Fix manual mapping for similar name properties"},
+        {FlatteningAnalyzer.DiagnosticId, "Fix manual for flattening of naming similar complex model"}
     };
     
-    public override ImmutableArray<string> FixableDiagnosticIds => ImmutableArray.Create(MapFromAnalyzer.DiagnosticId);
+    public override ImmutableArray<string> FixableDiagnosticIds => ImmutableArray.Create(MapFromAnalyzer.DiagnosticId, FlatteningAnalyzer.DiagnosticId);
     
     public sealed override FixAllProvider GetFixAllProvider()
     {
