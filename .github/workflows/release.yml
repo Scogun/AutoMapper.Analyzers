@@ -1,0 +1,29 @@
+name: Build, Test and Release
+
+on:
+  release:
+    types: published
+
+jobs:
+  test:
+
+    uses: ./.github/workflows/tests.yml
+
+  release:
+
+    needs: test
+    
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-dotnet@v2
+        name: Setup .Net
+        with:
+          dotnet-version: 6.x.x
+      - name: Restore dependencies
+        run: dotnet restore
+      - name: Release
+        run: dotnet build --no-restore -c Release -p:Version=${{ github.event.release.tag_name }}.0
+      - name: Push
+        run: dotnet nuget push ./package/AutoMapper.Analyzers.Common.Package/bin/Release/UCASoft.AutoMapper.Analyzers.*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json
