@@ -89,7 +89,7 @@ Just add **AutoMapper.Analyzers** package into a project which you would like to
 In case of installation **VSIX extention** any project will be checking by **AutoMapper.Analyzers**.
 So far, there is only one way to install the extension:
 1. Build [Vsix](package/AutoMapper.Analyzers.Vsix/AutoMapper.Analyzers.Vsix.csproj) project
-2. Find in `...\AutoMapper.Analyzers\package\AutoMapper.Analyzers.Vsix\bin\Debug` folder `AutoMapper.Analyzers.Vsix.vsix` file
+2. Find in `...\AutoMapper.Analyzers\package\AutoMapper.Analyzers.Vsix\bin\Release` folder `AutoMapper.Analyzers.Vsix.vsix` file
 3. Run it
 
 In nearest future VSIX extension will be pushed into VSIX repository.
