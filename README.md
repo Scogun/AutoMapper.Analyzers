@@ -7,7 +7,6 @@
 1. [Overview](#overview)
 2. [Structure](#structure)
    1. [Currently Available](#currently-available)
-   2. [In Progress](#in-progress)
 3. [Code Smells](#code-smells)
 4. [Installation](#installation)
    1. [NuGet package](#nuget-package)
@@ -23,10 +22,9 @@ The main reason to write this VS Extension and NuGet package is that developers 
 The project already contains:
 1. [AutoMapper.Analyzers.Common](src/AutoMapper.Analyzers.Common/AutoMapper.Analyzers.Common.csproj) - common AutoMapper Analyzers
 2. [AutoMapper.Analyzers.Common.CodeFixes](src/AutoMapper.Analyzers.Common.CodeFixes/AutoMapper.Analyzers.Common.CodeFixes.csproj) - common fixes for raised AutoMapper Analyzers diagnostics
-3. [AutoMapper.Analyzers.Common.Tests](tests/AutoMapper.Analyzers.Common.Tests/AutoMapper.Analyzers.Common.Tests.csproj) - tests for common AutoMapper Analyzers
-4. [AutoMapper.Analyzers.Vsix](package/AutoMapper.Analyzers.Vsix/AutoMapper.Analyzers.Vsix.csproj) - project to create VS Extension package
-##### In Progress
-1. AutoMapper.Analyzers.Common.Package - project for building and publishing the NuGet package
+3. [AutoMapper.Analyzers.Common.Package](package/AutoMapper.Analyzers.Common.Package/AutoMapper.Analyzers.Common.Package.csproj) - project for building and publishing the NuGet package
+4. [AutoMapper.Analyzers.Common.Tests](tests/AutoMapper.Analyzers.Common.Tests/AutoMapper.Analyzers.Common.Tests.csproj) - tests for common AutoMapper Analyzers
+5. [AutoMapper.Analyzers.Vsix](package/AutoMapper.Analyzers.Vsix/AutoMapper.Analyzers.Vsix.csproj) - project to create VS Extension package
 
 ## Code Smells
 <table>
