@@ -17,12 +17,14 @@ public abstract class BaseAnalyzer : DiagnosticAnalyzer
 
     protected readonly DiagnosticDescriptor Rule;
     
+    private readonly string smellUrlBase = "https://github.com/Scogun/AutoMapper.Analyzers/wiki/Smells#";
+    
     protected BaseAnalyzer()
     {
         Title = new LocalizableResourceString($"{InternalDiagnosticId}{nameof(Title)}", RulesResources.ResourceManager, typeof(RulesResources));
         Description = new LocalizableResourceString($"{InternalDiagnosticId}{nameof(Description)}", RulesResources.ResourceManager, typeof(RulesResources));
         Message = new LocalizableResourceString($"{InternalDiagnosticId}{nameof(Message)}", RulesResources.ResourceManager, typeof(RulesResources));
-        Rule = new DiagnosticDescriptor(InternalDiagnosticId, Title, Message, Category.ToString(), Severity, true, Description);
+        Rule = new DiagnosticDescriptor(InternalDiagnosticId, Title, Message, Category.ToString(), Severity, true, Description, $"{smellUrlBase}{InternalDiagnosticId.ToLower()}");
     }
     
     protected abstract string InternalDiagnosticId { get; }
