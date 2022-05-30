@@ -17,6 +17,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoMapper.Analyzers.Common.Package", "package\AutoMapper.Analyzers.Common.Package\AutoMapper.Analyzers.Common.Package.csproj", "{6BE5CCD5-652C-410F-8A37-3E046C3F62DF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,14 @@ Global
 		{4FC11BE6-9A0D-4147-A968-9D2B508D25D5}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4FC11BE6-9A0D-4147-A968-9D2B508D25D5}.Release|x86.ActiveCfg = Release|Any CPU
 		{4FC11BE6-9A0D-4147-A968-9D2B508D25D5}.Release|x86.Build.0 = Release|Any CPU
+		{6BE5CCD5-652C-410F-8A37-3E046C3F62DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BE5CCD5-652C-410F-8A37-3E046C3F62DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BE5CCD5-652C-410F-8A37-3E046C3F62DF}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{6BE5CCD5-652C-410F-8A37-3E046C3F62DF}.Debug|x86.Build.0 = Debug|Any CPU
+		{6BE5CCD5-652C-410F-8A37-3E046C3F62DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BE5CCD5-652C-410F-8A37-3E046C3F62DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6BE5CCD5-652C-410F-8A37-3E046C3F62DF}.Release|x86.ActiveCfg = Release|Any CPU
+		{6BE5CCD5-652C-410F-8A37-3E046C3F62DF}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
