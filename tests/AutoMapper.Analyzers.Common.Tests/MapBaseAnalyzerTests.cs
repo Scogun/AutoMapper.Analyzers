@@ -10,10 +10,14 @@ public class MapBaseAnalyzerTests<TAnalyzer> : BaseAnalyzerTests
 
     private static string MapName => string.Format(CreateMapCode, string.Empty);
 
-    protected async Task VerifyExpectedAsync(string diagnosticId, string forMembers)
+    protected async Task VerifyExpectedAsync(string diagnosticId, string forMembers, int locationCount = 1)
     {
         var badMapFrom = string.Format(CreateMapCode, forMembers);
-        var expected = AnalyzerVerifier<TAnalyzer>.Diagnostic(diagnosticId).WithArguments("TestProfile", MapName).WithLocation(0);
+        var expected = AnalyzerVerifier<TAnalyzer>.Diagnostic(diagnosticId).WithArguments("TestProfile", MapName);
+        for (int i = 0; i < locationCount; i++)
+        {
+            expected = expected.WithLocation(i);
+        }
         await VerifyAnalyzerAsync(badMapFrom, expected);
     }
 

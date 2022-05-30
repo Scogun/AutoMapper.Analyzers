@@ -32,6 +32,8 @@ namespace AutoMapper.Analyzer.Common.Tests
         public string Name { get; set; }
 
         public string Surname { get; set; }
+        
+        public string Address { get; set; }
     }
 
     public class OutputObject
@@ -43,6 +45,8 @@ namespace AutoMapper.Analyzer.Common.Tests
         public string Name { get; set; }
 
         public string Surname { get; set; }
+        
+        public string Address { get; set; }
 
         public string UserName { get; set; }
     }

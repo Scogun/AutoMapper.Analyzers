@@ -19,7 +19,7 @@ namespace AutoMapper.Analyzers.Common {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class RulesResources {
@@ -138,6 +138,33 @@ namespace AutoMapper.Analyzers.Common {
         internal static string AMA0003Title {
             get {
                 return ResourceManager.GetString("AMA0003Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Flattening of complex model with naming similar internal properties should be done by `IncludeMember` call..
+        /// </summary>
+        internal static string AMA0005Description {
+            get {
+                return ResourceManager.GetString("AMA0005Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Profile &apos;{0}&apos; contain map &apos;{1}&apos; with manual flattening of internal naming similar complex model..
+        /// </summary>
+        internal static string AMA0005Message {
+            get {
+                return ResourceManager.GetString("AMA0005Message", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Manual flattening of internal naming similar complex model..
+        /// </summary>
+        internal static string AMA0005Title {
+            get {
+                return ResourceManager.GetString("AMA0005Title", resourceCulture);
             }
         }
         
