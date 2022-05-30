@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <PropertyGroup>
-        <PackageId>UCASoft.AutoMapper.Analyzers</PackageId>
+        <PackageId>AutoMapper.Extensions.Analyzers</PackageId>
         <Authors>Sergey Antonov</Authors>
         <PackageProjectUrl>https://github.com/Scogun/AutoMapper.Analyzers</PackageProjectUrl>
         <PackageLicenseUrl>https://github.com/Scogun/AutoMapper.Analyzers/blob/main/LICENSE</PackageLicenseUrl>
