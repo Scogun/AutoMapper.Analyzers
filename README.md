@@ -38,7 +38,7 @@ The project already contains:
 	</tr>
 	<tr>
 		<td rowspan="7">Common smells</td>
-		<td rowspan="5">Available</td>
+		<td rowspan="6">Available</td>
 		<td><b>AMA0001</b></td>
 		<td rowspan="7">Warrning</td>
 		<td>Profile doesn't contain maps</td>
@@ -55,6 +55,11 @@ The project already contains:
 		<td>Available for next checking: "??", "== null", "!= null"</td>
 	</tr>
 	<tr>		
+		<td><b>AMA0005</b></td>
+		<td>Manual flattening of complex model</td>
+		<td>Available</td>
+	</tr>
+	<tr>		
 		<td><b>AMA0006</b></td>
 		<td>Manual flattening of naming similar complex model</td>
 		<td>Available</td>
@@ -65,14 +70,9 @@ The project already contains:
 		<td>Available</td>
 	</tr>
 	<tr>
-        <td rowspan="2">In Plans</td>
+        <td>In Plans</td>
 		<td><b>AMA0004</b></td>
 		<td>ForMember ignore for all left properties</td>
-		<td>...</td>
-	</tr>
-	<tr>		
-		<td><b>AMA0005</b></td>
-		<td>Manual flattening of complex model</td>
 		<td>...</td>
 	</tr>
 </table>
