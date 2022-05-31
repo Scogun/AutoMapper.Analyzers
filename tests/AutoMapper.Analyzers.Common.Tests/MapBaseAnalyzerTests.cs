@@ -26,12 +26,16 @@ public class MapBaseAnalyzerTests<TAnalyzer> : BaseAnalyzerTests
         await AnalyzerVerifier<TAnalyzer>.VerifyAnalyzerAsync(ClassSourceCode(mapFrom), expected);
     }
     
-    protected async Task VerifyCodeFixAsync<TCodeFix>(string diagnosticId, string forMember, string forMemberFix)
+    protected async Task VerifyCodeFixAsync<TCodeFix>(string diagnosticId, string forMember, string forMemberFix, int locationCount = 1)
         where TCodeFix : CodeFixProvider, new()
     {
         var mapFrom = string.Format(CreateMapCode, forMember);
         var fixMapFrom = string.Format(CreateMapCode, forMemberFix);
-        var expected = AnalyzerVerifier<TAnalyzer>.Diagnostic(diagnosticId).WithArguments("TestProfile", MapName).WithLocation(0);
+        var expected = AnalyzerVerifier<TAnalyzer>.Diagnostic(diagnosticId).WithArguments("TestProfile", MapName);
+        for (int i = 0; i < locationCount; i++)
+        {
+            expected = expected.WithLocation(i);
+        }
         await AnalyzerVerifier<TAnalyzer>.VerifyCodeFixAsync<TCodeFix>(ClassSourceCode(mapFrom), expected, ClassSourceCode(fixMapFrom, true));
     }
 }
