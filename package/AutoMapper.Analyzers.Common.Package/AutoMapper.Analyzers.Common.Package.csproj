@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <PropertyGroup>
-        <PackageId>AutoMapper.Extensions.Analyzers</PackageId>
+        <PackageId>AutoMapper.Contrib.Analyzers</PackageId>
         <Authors>Sergey Antonov</Authors>
         <PackageProjectUrl>https://github.com/Scogun/AutoMapper.Analyzers</PackageProjectUrl>
         <PackageLicenseUrl>https://github.com/Scogun/AutoMapper.Analyzers/blob/main/LICENSE</PackageLicenseUrl>
