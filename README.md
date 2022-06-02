@@ -2,6 +2,8 @@
 	<img src="package/Logo.ico" alt="Analyzers logo"/>
 </div>
 
+[![NuGet Version and Downloads count](https://buildstats.info/nuget/AutoMapper.Contrib.Analyzers)](https://www.nuget.org/packages/AutoMapper.Contrib.Analyzers)
+
 # Table of Contents
 
 1. [Overview](#overview)
