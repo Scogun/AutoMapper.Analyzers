@@ -75,7 +75,7 @@ public class NullSubstituteCodeFixProvider : CodeFixProvider
         srcProperty = string.Empty;
 
         var syntaxNode = invocation.DescendantNodes()
-            .FirstOrDefault(n => n is ConditionalExpressionSyntax || n is BinaryExpressionSyntax);
+            .FirstOrDefault(n => n is ConditionalExpressionSyntax or BinaryExpressionSyntax);
         if (syntaxNode is ConditionalExpressionSyntax { Condition: BinaryExpressionSyntax binaryCondition } conditional)
         {
             var srcMember = binaryCondition.Left.ToString();

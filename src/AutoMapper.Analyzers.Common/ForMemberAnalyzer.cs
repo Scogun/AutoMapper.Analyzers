@@ -29,7 +29,7 @@ public abstract class ForMemberAnalyzer : BaseAnalyzer
         return base.AnalyzeInvocationOperation(invocationOperation);
     }
     
-    protected (LambdaExpressionSyntax descExpression, LambdaExpressionSyntax srcExpression) GetLambdaExpressions(InvocationExpressionSyntax forMember)
+    public static (LambdaExpressionSyntax descExpression, LambdaExpressionSyntax srcExpression) GetLambdaExpressions(InvocationExpressionSyntax forMember)
     {
         var destExpression = forMember.ArgumentList.Arguments[0].Expression as LambdaExpressionSyntax;
         var optExpression = forMember.ArgumentList.Arguments[1].Expression as LambdaExpressionSyntax;
