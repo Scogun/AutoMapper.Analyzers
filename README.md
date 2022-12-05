@@ -83,7 +83,7 @@ The project already contains:
 There are two ways to install analyzers:
 
 ### NuGet Package
-Just add **AutoMapper.Analyzers** package into a project which you would like to control.
+Just add **AutoMapper.Contrib.Analyzers** package into a project which you would like to control.
 
 ### VSIX Extention
 In case of installation **VSIX extention** any project will be checking by **AutoMapper.Analyzers**.
